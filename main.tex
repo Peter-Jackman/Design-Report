@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc} %default by overleaf
+\usepackage{graphicx} %for pictures
+\usepackage{array} %for tables
+\usepackage[T1]{fontenc} %for Times New Roman
+\usepackage{geometry} %for margins
+
+%\linespread{2} %use this when Alton wants double spaced text
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=24mm,
+ top=20mm,
+ }
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\include{Title}
+\newpage
+\pagenumbering{roman}
+
+\begin{abstract}
+\addcontentsline{toc}{section}{Abstract}
+    This is the abstract for our design report. We have made a landslide detection system. Some random text to make it sound like we're really clever and have put loads of effort into this whole thing.
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+
+\newpage
+\input{Definitions}
+
+\newpage
+\pagenumbering{arabic}
+
+% Main Body
+\input{Introduction}
+\input{Section1}
+
+\end{document}
